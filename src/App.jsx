@@ -6,6 +6,8 @@ import Services from './components/Services'
 import AboutUs from './components/AboutUs'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import OurProjects from './components/OurProjects'
+import InvestmentOpportunities from './components/InvestmentOpportunities'
 
 function App() {
 
@@ -16,8 +18,11 @@ function App() {
      <Hero />
      <Services />
      <AboutUs />
+     <OurProjects />
+     <InvestmentOpportunities />
      <Contact />
      <Footer />
+     
      </div>
 
 

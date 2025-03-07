@@ -30,7 +30,7 @@
   }
 
   .section {
-    @apply py-24;
+    @apply py-10 px-20;
   }
 
   .heading {
@@ -56,6 +56,46 @@
   .footer-link {
     @apply relative inline-block text-gray-400 hover:text-white transition-colors duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-px before:bg-amber-500 before:transition-all before:duration-300 hover:before:w-full;
   }
+
+  
+.decorative-line {
+  @apply absolute w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600;
+}
+
+.decorative-circle {
+  @apply absolute w-4 h-4 rounded-full bg-amber-500/20;
+}
+
+.decorative-dots {
+  @apply absolute w-24 h-24;
+  background-image: radial-gradient(circle, rgb(var(--color-primary) / 0.2) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.curved-line {
+  @apply absolute pointer-events-none opacity-50;
+  stroke: rgb(var(--color-primary));
+  stroke-width: 1;
+  fill: none;
+}
+
+.curved-line path {
+  stroke: #fbbf24;
+  animation: drawLine 3s ease-in-out infinite;
+}
+
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: 100%;
+  }
+  50% {
+    stroke-dashoffset: 0%;
+  }
+  100% {
+    stroke-dashoffset: -100%;
+  }
+}
+
 }
 
 .hero-pattern {

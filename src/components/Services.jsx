@@ -7,23 +7,24 @@ const Services = () => {
     const services = [
         {
           icon: Briefcase,
-          title: "Portfolio Management",
-          desc: "Expert management of diversified investment portfolios tailored to your risk profile and goals.",
+          title: "Real Estate Investment & Growth",
+          desc: "Strategic real estate investments for sustainable growth and high returns.",
           image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         },
         {
           icon: TrendingUp,
-          title: "Wealth Planning",
-          desc: "Comprehensive financial planning and strategy development for long-term wealth creation.",
+          title: "Cutting-Edge Tech Solutions",
+          desc: "Innovative technology investments driving business transformation and scalability.",
           image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         },
         {
           icon: Users,
-          title: "Private Equity",
-          desc: "Exclusive access to high-potential private equity opportunities and venture capital investments.",
+          title: "Expert Business Consulting",
+          desc: "Tailored advisory services for strategic growth and competitive advantage.",
           image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         },
       ];
+      
 
   return (
     <section id="services" className="section bg-white">
@@ -31,11 +32,11 @@ const Services = () => {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false, amount: 0.5, threshold: 0.5 }} // Ensures animation triggers in center
             className="text-center mb-20"
           >
             <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">Our Expertise</span>
-            <h2 className="heading heading-gradient mb-6">Comprehensive Solutions</h2>
+            <h2 className="heading heading-gradient pb-3 mb-6">Comprehensive Solutions</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover our range of sophisticated investment services tailored to meet your financial goals
             </p>
@@ -46,10 +47,10 @@ const Services = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}  
+                viewport={{ once: false, amount: 0.7, threshold: 0.8 }} // Ensures animation triggers in center
                 transition={{ delay: index * 0.2 }}
-                className="card group overflow-hidden"
+                className="card group overflow-hidden shadow-md shadow-amber-200 hover:shadow-amber-300"
               >
                 <div className="relative h-48 -mx-8 -mt-8 mb-8 overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
