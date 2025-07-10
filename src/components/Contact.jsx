@@ -57,8 +57,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                  <p className="text-gray-600">contact@qutbeegroup.com</p>
-                  <p className="text-gray-600">support@qutbeegroup.com</p>
+                  <p className="text-gray-600">info@qutbee.com</p>
+                  <p className="text-gray-600">support@qutbee.com</p>
                 </div>
               </div>
             </div>
@@ -70,8 +70,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Call Us</h3>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
-                  <p className="text-gray-600">+1 (555) 987-6543</p>
+                  <p className="text-gray-600">+971 509853664</p>
+                  <p className="text-gray-600">+91 9149976788</p>
                 </div>
               </div>
             </div>
@@ -83,8 +83,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">Visit Us</h3>
-                  <p className="text-gray-600">123 Financial District</p>
-                  <p className="text-gray-600">New York, NY 10004</p>
+                  <p className="text-gray-600">Abu Dhabi</p>
+                  <p className="text-gray-600">United Arab Emirates</p>
                 </div>
               </div>
             </div>
