@@ -15,13 +15,14 @@ const AboutUs = () => {
         <path d="M10,90 Q30,40 50,60 T90,10" strokeDasharray="100%" />
       </svg>
       <div className="container relative">
+      <span className="text-amber-600 text-center font-semibold text-xl md:text-2xl lg:text-3xl mb-4 block">About Us</span>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.5 }} // Trigger animation when element is 50% in view
           >
-            <span className="text-amber-600 text-center font-semibold text-xl md:text-2xl lg:text-3xl mb-4 block">About Us</span>
+            {/* <span className="text-amber-600 text-center font-semibold text-xl md:text-2xl lg:text-3xl mb-4 block">About Us</span> */}
             <h2 className="heading heading-gradient pb-3 mb-8">Legacy of Excellence in Investment Management</h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               With a strong foundation in Technology, Real Estate, and Business Consulting, Qutbee Group has redefined investment excellence since its inception in 2020. Our approach blends cutting-edge innovation with strategic expertise, ensuring sustainable growth across diverse industries.

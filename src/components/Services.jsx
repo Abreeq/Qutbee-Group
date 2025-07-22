@@ -33,7 +33,7 @@ const Services = () => {
           viewport={{ once: false, amount: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">Our Expertise</span>
+          <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">Our Industries</span>
           <h2 className="heading heading-gradient pb-3 mb-6">Comprehensive Solutions</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Discover our range of sophisticated investment services tailored to meet your financial goals.
