@@ -7,9 +7,9 @@ import { ArrowRight, Globe, Shield, Award } from "lucide-react";
 
 const Hero = () => {
   const stats = [
-    { icon: Globe, title: "Global Reach", value: "20+ Countries" },
-    { icon: Shield, title: "Assets Protected", value: "$10B+" },
-    { icon: Award, title: "Industry Awards", value: "50+" },
+    { icon: Globe, title: "Global Reach", value: "10+ Countries" },
+    { icon: Shield, title: "Industry Experience", value: "10+ Years" },
+    { icon: Award, title: "Awards", value: "50+" },
   ];
 
   return (
@@ -58,13 +58,13 @@ const Hero = () => {
         <Swiper spaceBetween={30} pagination={{ clickable: true }} className="mb-20">
           <SwiperSlide>
             <div className="text-center max-w-5xl mx-auto">
-              <motion.span
+              {/* <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="inline-block text-amber-600 font-medium mb-6"
               >
                 Welcome to the Future of Investment
-              </motion.span>
+              </motion.span> */}
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

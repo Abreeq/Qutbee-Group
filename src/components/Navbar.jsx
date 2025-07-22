@@ -31,8 +31,10 @@ const Navbar = () => {
 
   const navLinks = [
     { href: '#home', label: 'Home' },
-    { href: '#services', label: 'Services' },
     { href: '#about', label: 'About' },
+    { href: '#vision', label: 'Vision' },
+    { href: '#business', label: 'Our Business' },
+    { href: '#investment', label: 'Investment' },
     { href: '#contact', label: 'Contact' }
   ];
 
@@ -42,8 +44,8 @@ const Navbar = () => {
       <div className="bg-amber-600 text-white py-2 hidden md:block">
         <div className="container flex justify-between items-center text-sm">
           <div className="flex space-x-6">
-            <span>📞 +91 9876543210</span>
-            <span>✉️ info@qutbee.com</span>
+            {/* <span>📞 +91 9876543210</span> */}
+            <span>✉️ business@qutbee.com</span>
           </div>
           <div className="flex space-x-4">
             <a href="#" className="hover:text-gray-200"><Linkedin className="w-5 h-5" /></a>
@@ -77,9 +79,9 @@ const Navbar = () => {
                   {label}
                 </a>
               ))}
-              <a href="#contact" className="btn btn-primary">
+              {/* <a href="#contact" className="btn btn-primary">
                 Get Started
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
