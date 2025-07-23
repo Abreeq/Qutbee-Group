@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 const Contact = () => {
   return (
     <section id="contact" className="section bg-white relative overflow-hidden">
-      <div className="decorative-dots top-40 left-8"></div>
+      {/* <div className="decorative-dots top-40 left-8"></div>
       <div className="decorative-dots bottom-20 right-8"></div>
       <svg className="curved-line absolute top-0 left-0 w-100" viewBox="0 0 100 100">
         <path
@@ -26,7 +26,7 @@ const Contact = () => {
           strokeDasharray="100"
           strokeDashoffset="100"
         />
-      </svg>
+      </svg> */}
       
       <div className="container">
         <motion.div
