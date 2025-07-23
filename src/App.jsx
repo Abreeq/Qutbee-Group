@@ -8,21 +8,24 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import OurProjects from './components/OurProjects'
 import InvestmentOpportunities from './components/InvestmentOpportunities'
+import Modal from './components/Modal'
 
 function App() {
+  // For Pop-up
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
     <div className="min-h-screen">
      <Navbar />
-     <Hero />
+     <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+     <Hero setIsOpen={setIsOpen}/>
      <Services />
      <AboutUs />
      <OurProjects />
      <InvestmentOpportunities />
      <Contact />
      <Footer />
-     
      </div>
 
 

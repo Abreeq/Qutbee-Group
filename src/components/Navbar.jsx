@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Menu as MenuIcon, X as XIcon, Linkedin, Twitter } from "lucide-react";
+import { Menu as MenuIcon, X as XIcon, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import logo from '../assets/Qutbeelogo.webp';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,18 +49,20 @@ const Navbar = () => {
             <span>✉️ business@qutbee.com</span>
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-gray-200"><Linkedin className="w-5 h-5" /></a>
+            <a href="https://www.linkedin.com/company/alqutbeegroup/" target="_blank" className="hover:text-gray-200"><Linkedin className="w-5 h-5" /></a>
             <a href="#" className="hover:text-gray-200"><Twitter className="w-5 h-5" /></a>
+            <a href="#" className="hover:text-gray-200"><Facebook className="w-5 h-5" /></a>
+            <a href="#" className="hover:text-gray-200"><Instagram className="w-5 h-5"/></a>
           </div>
         </div>
       </div>
 
       {/* 🔹 Navbar */}
-      <nav className={`fixed w-full z-50 transition[top left] duration-300 ${isScrolled ? 'top-0 left-0 py-4 bg-white/90 backdrop-blur-md shadow-lg' : 'py-6 bg-transparent'}`}>
+      <nav className={`fixed w-full z-50 transition[top left] duration-300 ${isScrolled ? 'top-0 left-0 py-1 bg-white/90 backdrop-blur-md shadow-lg' : 'py-6 bg-transparent'}`}>
         <div className="container">
           <div className="flex items-center justify-between">
             <a href="#" className="text-3xl font-bold heading-gradient">
-              Qutbee Group
+              <img src={logo} alt="logo" className="h-20 w-auto object-contain"/>
             </a>
 
             <button
@@ -79,9 +82,6 @@ const Navbar = () => {
                   {label}
                 </a>
               ))}
-              {/* <a href="#contact" className="btn btn-primary">
-                Get Started
-              </a> */}
             </div>
           </div>
         </div>
@@ -105,13 +105,13 @@ const Navbar = () => {
                     {label}
                   </a>
                 ))}
-                <a
+                {/* <a
                   href="#contact"
                   className="btn btn-primary w-full justify-center mt-6"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started
-                </a>
+                </a> */}
               </div>
             </motion.div>
           )}

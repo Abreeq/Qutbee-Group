@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import { ArrowRight, Globe, Shield, Award } from "lucide-react";
 
-const Hero = () => {
+const Hero = ({setIsOpen}) => {
   const stats = [
     { icon: Globe, title: "Global Reach", value: "10+ Countries" },
     { icon: Shield, title: "Industry Experience", value: "10+ Years" },
@@ -27,44 +27,11 @@ const Hero = () => {
         }}
       />
 
-      {/* Decorative elements */}
-      <div className="decorative-dots top-40 left-8"></div>
-      <div className="decorative-dots bottom-20 right-8"></div>
-      <svg className="curved-line absolute top-0 left-0 w-101" viewBox="0 0 100 100">
-        <path
-          d="M0,50 Q25,0 50,50 T100,50"
-          stroke="currentColor"
-          strokeWidth="1"
-          fill="none"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
-      </svg>
-      <svg className="curved-line absolute bottom-0 right-0 w-96 rotate-180" viewBox="0 0 100 100">
-        <path
-          d="M0,50 Q25,25 50,50 T100,50"
-          stroke="currentColor"
-          strokeWidth="1"
-          fill="none"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
-      </svg>
-
       <div className="container relative">
-        <div className="decorative-circle top-20 left-0"></div>
-        <div className="decorative-circle bottom-10 right-0"></div>
-
         <Swiper spaceBetween={30} pagination={{ clickable: true }} className="mb-20">
           <SwiperSlide>
             <div className="text-center max-w-5xl mx-auto">
-              {/* <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="inline-block text-amber-600 font-medium mb-6"
-              >
-                Welcome to the Future of Investment
-              </motion.span> */}
+
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -72,6 +39,7 @@ const Hero = () => {
               >
                 Invest in Your Future with Qutbee Group
               </motion.h1>
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -80,15 +48,17 @@ const Hero = () => {
               >
                 Experience diverse investment opportunities with a data-driven approach across multiple sectors in the MENA region.
               </motion.p>
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-6 justify-center pb-7"
               >
-                <a href="#contact" className="btn btn-primary flex items-center">
-                  Start Investing <span><ArrowRight className="ml-2" /></span>
-                </a>
+                <button onClick={() => setIsOpen(true)} className="btn btn-primary flex items-center cursor-pointer">
+                      Start Investing <span><ArrowRight className="ml-2" /></span>  
+                </button>
+               
                 <a href="#about" className="btn bg-white text-amber-600 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
                   Learn More
                 </a>

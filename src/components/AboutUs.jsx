@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from "framer-motion";
+import { ArrowRight } from 'lucide-react';
 
 const AboutUs = () => {
   return (
     <section id="about" className="section bg-gradient-to-b from-amber-50/50 relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-amber-50/50"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-amber-50 via-white to-amber-50/50"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(251,191,36,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(251,191,36,0.05),transparent_50%)]"></div>
       <div className="decorative-dots bottom-20 left-8 rotate-12"></div>
@@ -13,9 +14,20 @@ const AboutUs = () => {
       </svg>
       <svg className="curved-line absolute bottom-0 right-0 w-96 h-96 opacity-10" viewBox="0 0 100 100">
         <path d="M10,90 Q30,40 50,60 T90,10" strokeDasharray="100%" />
-      </svg>
+      </svg> */}
       <div className="container relative">
-      <span className="text-amber-600 text-center font-semibold text-xl md:text-2xl lg:text-3xl mb-4 block">About Us</span>
+      <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="text-center mb-16"
+        >
+          <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">About Us</span>
+          <h2 className="heading heading-gradient pb-3 mb-6">Legacy of Excellence in Investment Management</h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          At Qutbee, we set the standard for visionary investment solution merging experience, innovation, and strategic insight to create lasting success.
+          </p>
+        </motion.div>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -23,7 +35,7 @@ const AboutUs = () => {
             viewport={{ once: false, amount: 0.5 }} // Trigger animation when element is 50% in view
           >
             {/* <span className="text-amber-600 text-center font-semibold text-xl md:text-2xl lg:text-3xl mb-4 block">About Us</span> */}
-            <h2 className="heading heading-gradient pb-3 mb-8">Legacy of Excellence in Investment Management</h2>
+            {/* <h2 className="heading heading-gradient pb-3 mb-8">Legacy of Excellence in Investment Management</h2> */}
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               With a strong foundation in Technology, Real Estate, and Business Consulting, Qutbee Group has redefined investment excellence since its inception in 2020. Our approach blends cutting-edge innovation with strategic expertise, ensuring sustainable growth across diverse industries.
             </p>
@@ -62,6 +74,19 @@ const AboutUs = () => {
             />
           </motion.div>
         </div>
+       
+        <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="flex justify-center py-7"
+              >
+               <button>
+                 <a href="#about" className="btn btn-primary flex items-center">
+                    Know More <span><ArrowRight className="ml-2" /></span>
+                  </a>
+               </button>
+         </motion.div>
       </div>
     </section>
   );
