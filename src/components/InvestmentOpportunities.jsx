@@ -28,7 +28,23 @@ const fadeInVariants = {
 const FullScreenInvestment = () => {
   return (
     <section className="section relative w-full overflow-hidden">
-      
+       <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="text-center"
+        >
+          <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">
+            Our Investments
+          </span>
+          <h2 className="heading text-gray-800 mb-6">
+           Smart <span className="text-amber-600">Investments</span> for Lasting Growth
+          </h2>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          Discover our <span className="text-amber-600 font-semibold">portfolio</span> focused on sustainable value.
+          </p>
+        </motion.div>
+
       {opportunities.map((item, index) => (
         <motion.div
           key={index}

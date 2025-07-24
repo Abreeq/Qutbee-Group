@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import OurProjects from './components/OurProjects'
 import InvestmentOpportunities from './components/InvestmentOpportunities'
 import Modal from './components/Modal'
+import Partners from './components/Partners'
 
 function App() {
   // For Pop-up
@@ -22,6 +23,7 @@ function App() {
      <Hero setIsOpen={setIsOpen}/>
      <Services />
      <AboutUs />
+     <Partners/>
      <OurProjects />
      <InvestmentOpportunities />
      <Contact />

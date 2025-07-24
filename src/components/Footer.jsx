@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Twitter } from "lucide-react"; // Ensure you have 'lucide-react' installed
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"; // Ensure you have 'lucide-react' installed
 
 const navLinks = [
     { href: '#home', label: 'Home' },
@@ -24,13 +24,21 @@ const Footer = () => {
                 Your trusted partner in investment management and wealth creation, delivering excellence since 2000.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
+                <a href="https://www.linkedin.com/company/alqutbeegroup/" target="_blank" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
                   <span className="sr-only">LinkedIn</span>
                   <Linkedin className="w-5 h-5 text-white" />
                 </a>
                 <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
                   <span className="sr-only">Twitter</span>
                   <Twitter className="w-5 h-5 text-white" />
+                </a>
+                <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
+                  <span className="sr-only">Twitter</span>
+                  <Facebook className="w-5 h-5 text-white" />
+                </a>
+                <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
+                  <span className="sr-only">Twitter</span>
+                  <Instagram className="w-5 h-5 text-white" />
                 </a>
               </div>
             </div>
