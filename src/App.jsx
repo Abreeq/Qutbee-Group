@@ -7,7 +7,10 @@ import AboutUs from './components/AboutUs'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import OurProjects from './components/OurProjects'
-import InvestmentOpportunities from './components/InvestmentOpportunities'
+import OurVision from './components/ourvision';
+import InvestmentOpportunities from './components/InvestmentOpportunities';
+import About from './pages/About';
+
 
 function App() {
 
@@ -18,8 +21,10 @@ function App() {
      <Hero />
      <Services />
      <AboutUs />
+     <OurVision />
      <OurProjects />
      <InvestmentOpportunities />
+     <About />
      <Contact />
      <Footer />
      
@@ -31,3 +36,8 @@ function App() {
 }
 
 export default App
+
+
+
+
+

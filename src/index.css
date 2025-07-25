@@ -1,14 +1,20 @@
 @import "tailwindcss";
 
+
 @tailwind utilities;
 
 @layer base {
   :root {
     --color-primary: 179 156 140;
+    --font-color: #F7EF8A;
+    font-family: "Poppins", sans-serif;
+
   }
   
   body {
     @apply bg-white text-gray-900;
+      font-family: "Poppins";
+      
   }
 
   ::selection {
@@ -22,6 +28,7 @@
   }
   
   .btn {
+    
     @apply inline-flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300;
   }
   
@@ -34,6 +41,7 @@
   }
 
   .heading {
+    
     @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold;
   }
 
@@ -46,6 +54,7 @@
   }
 
   .nav-link {
+     
     @apply relative py-2 text-gray-600 hover:text-amber-600 transition-colors duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-amber-500 before:transition-all before:duration-300 hover:before:w-full;
   }
 

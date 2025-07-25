@@ -70,7 +70,7 @@ const Hero = () => {
                 animate={{ opacity: 1, y: 0 }}
                 className="heading heading-gradient mb-8 pb-3 px-10"
               >
-                Invest in Your Future with Qutbee Group
+                Invest in Your Future with Qutbee Group.
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
