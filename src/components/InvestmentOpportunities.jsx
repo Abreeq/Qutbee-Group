@@ -28,88 +28,22 @@ const fadeInVariants = {
 const FullScreenInvestment = () => {
   return (
     <section className="section relative w-full overflow-hidden">
-      <div className="decorative-dots top-40 left-8"></div>
-      <div className="decorative-dots bottom-20 right-8"></div>
-      <svg className="curved-line absolute top-60 left-0 w-screen" viewBox="0 0 100 100">
-        <path
-          d="M0,50 Q25,0 50,50 T100,50"
-          stroke="currentColor"
-          strokeWidth="0.2"
-          fill="none"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
-      </svg>
-      <svg className="curved-line absolute top-50 left-0 w-screen" viewBox="0 0 100 100">
-        <path
-          d="M0,50 Q25,0 50,50 T100,50"
-          stroke="currentColor"
-          strokeWidth="0.2"
-          fill="none"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
-      </svg>
-      <svg className="curved-line absolute top-70 left-0 w-screen" viewBox="0 0 100 100">
-        <path
-          d="M0,50 Q25,0 50,50 T100,50"
-          stroke="currentColor"
-          strokeWidth="0.2"
-          fill="none"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
-      </svg>
-      <svg className="curved-line absolute top-80 left-0 w-screen" viewBox="0 0 100 100">
-        <path
-          d="M0,50 Q25,0 50,50 T100,50"
-          stroke="currentColor"
-          strokeWidth="0.2"
-          fill="none"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
-      </svg>
-      <svg className="curved-line absolute bottom-40 right-0 w-screen rotate-180" viewBox="0 0 100 100">
-        <path
-          d="M0,50 Q25,25 50,50 T100,50"
-          stroke="currentColor"
-          strokeWidth="0.2"
-          fill="none"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
-      </svg>
-      <svg className="curved-line absolute bottom-30 right-0 w-screen rotate-180" viewBox="0 0 100 100">
-        <path
-          d="M0,50 Q25,25 50,50 T100,50"
-          stroke="currentColor"
-          strokeWidth="0.2"
-          fill="none"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
-      </svg>
-      <svg className="curved-line absolute bottom-20 right-0 w-screen rotate-180" viewBox="0 0 100 100">
-        <path
-          d="M0,50 Q25,25 50,50 T100,50"
-          stroke="currentColor"
-          strokeWidth="0.2"
-          fill="none"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
-      </svg>
-      <svg className="curved-line absolute bottom-10 right-0 w-screen rotate-180" viewBox="0 0 100 100">
-        <path
-          d="M0,50 Q25,25 50,50 T100,50"
-          stroke="currentColor"
-          strokeWidth="0.2"
-          fill="none"
-          strokeDasharray="100"
-          strokeDashoffset="100"
-        />
-      </svg>
+       <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="text-center"
+        >
+          <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">
+            Our Investments
+          </span>
+          <h2 className="heading text-gray-800 mb-6">
+           Smart <span className="text-amber-600">Investments</span> for Lasting Growth
+          </h2>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          Discover our <span className="text-amber-600 font-semibold">portfolio</span> focused on sustainable value.
+          </p>
+        </motion.div>
 
       {opportunities.map((item, index) => (
         <motion.div

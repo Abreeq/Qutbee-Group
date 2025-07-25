@@ -7,27 +7,28 @@ import AboutUs from './components/AboutUs'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import OurProjects from './components/OurProjects'
-import OurVision from './components/ourvision';
-import InvestmentOpportunities from './components/InvestmentOpportunities';
-import About from './pages/About';
-
+import InvestmentOpportunities from './components/InvestmentOpportunities'
+import Modal from './components/Modal'
+import Partners from './components/Partners'
 
 function App() {
+  // For Pop-up
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
     <div className="min-h-screen">
      <Navbar />
-     <Hero />
+     <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+     <Hero setIsOpen={setIsOpen}/>
      <Services />
      <AboutUs />
-     <OurVision />
+     <Partners/>
      <OurProjects />
      <InvestmentOpportunities />
-     <About />
+     {/* <About /> */}
      <Contact />
      <Footer />
-     
      </div>
 
 
