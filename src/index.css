@@ -8,6 +8,7 @@
   }
   
   body {
+    font-family: 'Poppins', sans-serif;
     @apply bg-white text-gray-900;
   }
 
@@ -39,6 +40,7 @@
 
   .heading-gradient {
     @apply bg-gradient-to-r from-amber-500 to-amber-700 bg-clip-text text-transparent;
+    /* from-[#d2ac47] to-[#ae8625] */
   }
 
   .card {
