@@ -2,11 +2,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
 export default function Modal({ isOpen, onClose}) {
-   
+    const handleBackdropClick = (e) => {
+      // If the clicked element is the backdrop itself, close the modal
+      if (e.target === e.currentTarget) {
+        onClose();
+      }
+    };
+
       return (
         <AnimatePresence>
           {isOpen && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+            <div onClick={handleBackdropClick} className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
               <motion.div
                 key="modal"
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -14,6 +20,7 @@ export default function Modal({ isOpen, onClose}) {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3, ease: "easeIn" }}
                 className="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md relative"
+                onClick={(e) => e.stopPropagation()}
               >
                 {/* Close Button */}
                 <button

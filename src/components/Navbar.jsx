@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <>
       {/* 🔹 Top Bar */}
-      <div className="bg-amber-600 text-white py-2 hidden md:block">
+      <div className="bg-amber-600 text-white py-3 hidden md:block">
         <div className="container flex justify-between items-center text-sm">
           <div className="flex space-x-6">
             {/* <span>📞 +91 9876543210</span> */}
@@ -58,7 +58,7 @@ const Navbar = () => {
       </div>
 
       {/* 🔹 Navbar */}
-      <nav className={`fixed w-full z-50 transition[top left] duration-300 ${isScrolled ? 'top-0 left-0 py-1 bg-white/90 backdrop-blur-md shadow-lg' : 'py-6 bg-transparent'}`}>
+      <nav className={`fixed w-full z-50 transition[top left] duration-300 ${isScrolled ? 'top-0 left-0 py-2 bg-white/90 backdrop-blur-md shadow-lg' : 'py-2 bg-transparent'}`}>
         <div className="container">
           <div className="flex items-center justify-between">
             <a href="#" className="text-3xl font-bold heading-gradient">
