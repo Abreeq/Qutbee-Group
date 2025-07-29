@@ -35,7 +35,7 @@ const Contact = () => {
           viewport={{ once: false, amount: 0.5 }}
           className="text-center mb-20"
         >
-          <span className="text-amber-600 font-medium mb-4 block">Contact Us</span>
+          <span className="text-[var(--gold-deep)] font-medium mb-4 block">Contact Us</span>
           <h2 className="heading heading-gradient mb-6">Let's Start Your Journey</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to transform your investment strategy? Our team is here to help you achieve your financial goals.

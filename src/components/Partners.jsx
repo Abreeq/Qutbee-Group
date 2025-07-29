@@ -49,7 +49,7 @@ export default function Partners() {
         viewport={{ once: false, amount: 0.5 }}
         className="text-center mb-16"
       >
-        <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">Top Opportunities</span>
+        <span className="text-[var(--gold-deep)] font-semibold text-lg md:text-xl mb-4 block">Top Opportunities</span>
         <h2 className="heading heading-gradient pb-3 mb-6">Top investment opportunities with us </h2>
         {/* <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Discover our range of sophisticated investment services tailored to meet your financial goals.
@@ -88,7 +88,7 @@ export default function Partners() {
             ))}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gray-300 rounded-b-xl overflow-hidden z-50">
             <div
-              className="h-1 bg-amber-500 transition-all duration-75 linear progress-fill"
+              className="h-1 bg-[var(--gold-soft)] transition-all duration-75 linear progress-fill"
               ref={progressBarRef}
             />
           </div>

@@ -59,7 +59,7 @@ const Hero = ({setIsOpen}) => {
                       Start Investing <span><ArrowRight className="ml-2" /></span>  
                 </button>
                
-                <a href="#about" className="btn bg-white text-amber-600 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                <a href="#about" className="btn bg-white text-[var(--gold-deep)] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
                   Learn More
                 </a>
               </motion.div>
@@ -81,11 +81,11 @@ const Hero = ({setIsOpen}) => {
                     initial={{ opacity: 0, y: 20 }} // Fade-in effect
                     whileInView={{ opacity: 1, y: 0 }} // Appear when in view
                     viewport={{ once: false, amount: 0.5 }}
-                    whileHover={{ y: -8, boxShadow: "0px 10px 20px rgba(251,191,36,0.3)" }} // Moves up slightly
+                    whileHover={{ y: -8, boxShadow: "0px 10px 20px rgba(174,134,37,0.4)" }} // Moves up slightly
                     transition={{ duration: 0.4, ease: "easeOut" }}
                     className="relative text-center bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl cursor-pointer"
                 >
-                    <stat.icon className="w-12 h-12 text-amber-600 mx-auto mb-4 transition-all duration-300" />
+                    <stat.icon className="w-12 h-12 text-[var(--gold-deep)] mx-auto mb-4 transition-all duration-300" />
                     <h3 className="font-bold text-2xl mb-2 text-gray-800">{stat.value}</h3>
                     <p className="text-gray-600 text-lg">{stat.title}</p>
                 </motion.div>

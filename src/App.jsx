@@ -10,6 +10,7 @@ import OurProjects from './components/OurProjects'
 import InvestmentOpportunities from './components/InvestmentOpportunities'
 import Modal from './components/Modal'
 import Partners from './components/Partners'
+import Scroll from './components/Scroll'
 
 function App() {
   // For Pop-up
@@ -19,6 +20,8 @@ function App() {
     <>
     <div className="min-h-screen">
      <Navbar />
+     {/* for Scroll to top */}
+     <Scroll/>
      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
      <Hero setIsOpen={setIsOpen}/>
      <Services />

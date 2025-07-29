@@ -33,7 +33,7 @@ const Services = () => {
           viewport={{ once: false, amount: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">Our Industries</span>
+          <span className="text-[var(--gold-deep)] font-semibold text-lg md:text-xl mb-4 block">Our Industries</span>
           <h2 className="heading heading-gradient pb-3 mb-6">Comprehensive Solutions</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Discover our range of sophisticated investment services tailored to meet your financial goals.
@@ -48,7 +48,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.7 }}
               transition={{ delay: index * 0.2 }}
-              className="group bg-white rounded-lg overflow-hidden shadow-md shadow-amber-200 hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-3"
+              className="group bg-white rounded-lg overflow-hidden shadow-md shadow-[rgba(210,172,71,0.4)] hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-3"
             >
               <div className="relative h-56 sm:h-64 md:h-48 lg:h-56 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
@@ -62,7 +62,7 @@ const Services = () => {
               <div className="p-6 text-center">
                 <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">{service.desc}</p>
-                <a href="#contact" className="inline-flex items-center text-amber-600 font-medium hover:text-amber-700">
+                <a href="#contact" className="inline-flex items-center text-[var(--gold-classic)] font-medium hover:text-[var(--gold-deep)]">
                   Learn More <ChevronRight className="ml-2" />
                 </a>
               </div>
