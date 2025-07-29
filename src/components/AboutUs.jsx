@@ -22,7 +22,7 @@ const AboutUs = () => {
           viewport={{ once: false, amount: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">About Us</span>
+          <span className="text-[var(--gold-deep)] font-semibold text-lg md:text-xl mb-4 block">About Us</span>
           <h2 className="heading heading-gradient pb-3 mb-6">Legacy of Excellence in Investment Management</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           At Qutbee, we set the standard for visionary investment solution merging experience, innovation, and strategic insight to create lasting success.
@@ -54,7 +54,7 @@ const AboutUs = () => {
                   transition={{ delay: index * 0.2 }}
                   className="flex items-center text-gray-700"
                 >
-                  <div className="w-2 h-2 bg-amber-600 rounded-full mr-4" />
+                  <div className="w-2 h-2 bg-[var(--gold-soft)] rounded-full mr-4" />
                   {item}
                 </motion.li>
               ))}
@@ -66,7 +66,7 @@ const AboutUs = () => {
             viewport={{ once: false, amount: 0.5 }} // Triggers animation when div is in the middle of the screen
             className="relative"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl rotate-6 blur-xl opacity-20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[var(--gold-deep)] to-[var(--gold-classic)] rounded-2xl rotate-6 blur-xl opacity-20" />
             <img 
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
               alt="Modern office building"
@@ -79,7 +79,7 @@ const AboutUs = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="flex justify-center py-7"
+                className="flex justify-center pt-10 pb-6"
               >
                <button>
                  <a href="#about" className="btn btn-primary flex items-center">

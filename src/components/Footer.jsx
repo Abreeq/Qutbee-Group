@@ -26,19 +26,19 @@ const Footer = () => {
               <div className="flex space-x-4">
                 <a href="https://www.linkedin.com/company/alqutbeegroup/" target="_blank" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
                   <span className="sr-only">LinkedIn</span>
-                  <Linkedin className="w-5 h-5 text-white" />
+                  <Linkedin className="w-5 h-5 text-white hover:text-[var(--gold-soft)]" />
                 </a>
                 <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
                   <span className="sr-only">Twitter</span>
-                  <Twitter className="w-5 h-5 text-white" />
+                  <Twitter className="w-5 h-5 text-white hover:text-[var(--gold-soft)]" />
                 </a>
                 <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
                   <span className="sr-only">Twitter</span>
-                  <Facebook className="w-5 h-5 text-white" />
+                  <Facebook className="w-5 h-5 text-white hover:text-[var(--gold-soft)]" />
                 </a>
                 <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
                   <span className="sr-only">Twitter</span>
-                  <Instagram className="w-5 h-5 text-white" />
+                  <Instagram className="w-5 h-5 text-white hover:text-[var(--gold-soft)]" />
                 </a>
               </div>
             </div>

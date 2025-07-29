@@ -34,14 +34,14 @@ const FullScreenInvestment = () => {
           viewport={{ once: false, amount: 0.5 }}
           className="text-center"
         >
-          <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">
+          <span className="text-[var(--gold-deep)] font-semibold text-lg md:text-xl mb-4 block">
             Our Investments
           </span>
           <h2 className="heading text-gray-800 mb-6">
-           Smart <span className="text-amber-600">Investments</span> for Lasting Growth
+           Smart <span className="text-[var(--gold-classic)]">Investments</span> for Lasting Growth
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-          Discover our <span className="text-amber-600 font-semibold">portfolio</span> focused on sustainable value.
+          Discover our <span className="text-[var(--gold-classic)] font-semibold">portfolio</span> focused on sustainable value.
           </p>
         </motion.div>
 
@@ -76,7 +76,7 @@ const FullScreenInvestment = () => {
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="w-full lg:w-1/2"
             >
-              <h2 className="text-2xl md:text-4xl font-bold text-amber-600 text-center md:text-left">
+              <h2 className="text-2xl md:text-4xl font-bold text-[var(--gold-classic)] text-center md:text-left">
                 {item.title}
               </h2>
               <p className="text-base md:text-lg text-gray-600 mt-4 md:mt-6 leading-relaxed text-justify md:text-left">
@@ -85,10 +85,10 @@ const FullScreenInvestment = () => {
 
               {/* Buttons */}
               <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <button className="px-6 py-2 bg-amber-600 text-white text-lg rounded-lg shadow-md hover:bg-amber-700 transition duration-300 flex items-center justify-center gap-2">
+                <button className="px-6 py-2 bg-[var(--gold-classic)] text-white text-lg rounded-lg shadow-md hover:bg-[var(--gold-deep)] transition duration-300 flex items-center cursor-pointer justify-center gap-2">
                   Invest Now <ArrowRightCircle className="w-5 h-5" />
                 </button>
-                <button className="px-6 py-2 border-2 border-amber-600 text-amber-600 text-lg rounded-lg shadow-md hover:bg-amber-600 hover:text-white transition duration-300">
+                <button className="px-6 py-2 border-2 border-[var(--gold-classic)] text-[var(--gold-classic)] text-lg cursor-pointer rounded-lg shadow-md hover:bg-[var(--gold-classic)] hover:text-white transition duration-300">
                   Learn More
                 </button>
               </div>

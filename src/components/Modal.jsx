@@ -25,14 +25,14 @@ export default function Modal({ isOpen, onClose}) {
                 {/* Close Button */}
                 <button
                   onClick={onClose}
-                  className="absolute top-4 right-4 text-gray-400 hover:text-black cursor-pointer"
+                  className="absolute top-4 right-4 text-[var(--gold-deep)] hover:text-[var(--gold-classic)] cursor-pointer"
                   aria-label="Close"
                 >
                   <X size={24} />
                 </button>
     
                 {/* Form Heading */}
-                <h2 className="text-xl font-bold text-center mb-6 text-navy-800">Start Your Investment Journey</h2>
+                <h2 className="text-2xl heading-gradient font-bold text-center mt-4 mb-6 text-navy-800">Start Your Investment Journey</h2>
     
                 <form className="space-y-4" >
                     <div className="grid sm:grid-cols-2 gap-6">
@@ -43,7 +43,7 @@ export default function Modal({ isOpen, onClose}) {
                         <input
                             type="text"
                             name="firstName"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-4 focus:ring-amber-100 outline-none transition-all"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[var(--gold-soft)] focus:ring-4 focus:ring-amber-100 outline-none transition-all"
                             required
                         />
                         </div>
@@ -54,7 +54,7 @@ export default function Modal({ isOpen, onClose}) {
                         <input
                             type="text"
                             name="lastName"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-4 focus:ring-amber-100 outline-none transition-all"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[var(--gold-soft)] focus:ring-4 focus:ring-amber-100 outline-none transition-all"
                             required
                         />
                         </div>
@@ -68,7 +68,7 @@ export default function Modal({ isOpen, onClose}) {
                         <input
                         type="email"
                         name="email"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-4 focus:ring-amber-100 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[var(--gold-soft)] focus:ring-4 focus:ring-amber-100 outline-none transition-all"
                         required
                         />
                     </div>
@@ -80,7 +80,7 @@ export default function Modal({ isOpen, onClose}) {
                         <input
                         type="number"
                         name="number"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-4 focus:ring-amber-100 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[var(--gold-soft)] focus:ring-4 focus:ring-amber-100 outline-none transition-all"
                         required
                         />
                     </div>
@@ -92,7 +92,7 @@ export default function Modal({ isOpen, onClose}) {
                         </label>
                         <select
                         name="investmentInterest"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-4 focus:ring-amber-100 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[var(--gold-soft)] focus:ring-4 focus:ring-amber-100 outline-none transition-all"
                         required
                         >
                         <option value="">Select an option</option>

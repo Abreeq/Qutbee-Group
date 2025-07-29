@@ -43,14 +43,14 @@ const OurProjects = () => {
           viewport={{ once: false, amount: 0.5 }}
           className="text-center mb-12"
         >
-          <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">
+          <span className="text-[var(--gold-deep)] font-semibold text-lg md:text-xl mb-4 block">
             Our Projects
           </span>
           <h2 className="heading text-gray-800 mb-6">
-            Transforming <span className="text-amber-600">Visions</span> into Reality
+            Transforming <span className="text-[var(--gold-classic)]">Visions</span> into Reality
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Explore our <span className="text-amber-600 font-semibold">flagship projects</span> designed for growth and sustainability.
+            Explore our <span className="text-[var(--gold-classic)] font-semibold">flagship projects</span> designed for growth and sustainability.
           </p>
         </motion.div>
 
@@ -84,7 +84,7 @@ const OurProjects = () => {
                 <p className="text-gray-200 text-sm sm:text-base mb-4">{project.desc}</p>
                 <a
                   href="#contact"
-                  className="inline-flex items-center bg-amber-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-amber-600 transition-all"
+                  className="inline-flex items-center bg-[var(--gold-classic)] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[var(--gold-deep)] transition-all"
                 >
                   Learn More <ArrowRight className="ml-2" />
                 </a>

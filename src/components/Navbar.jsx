@@ -42,17 +42,17 @@ const Navbar = () => {
   return (
     <>
       {/* 🔹 Top Bar */}
-      <div className="bg-amber-600 text-white py-3 hidden md:block">
+      <div className="bg-[var(--gold-classic)] text-white py-3 hidden md:block">
         <div className="container flex justify-between items-center text-sm">
           <div className="flex space-x-6">
             {/* <span>📞 +91 9876543210</span> */}
             <span>✉️ business@qutbee.com</span>
           </div>
           <div className="flex space-x-4">
-            <a href="https://www.linkedin.com/company/alqutbeegroup/" target="_blank" className="hover:text-gray-200"><Linkedin className="w-5 h-5" /></a>
-            <a href="#" className="hover:text-gray-200"><Twitter className="w-5 h-5" /></a>
-            <a href="#" className="hover:text-gray-200"><Facebook className="w-5 h-5" /></a>
-            <a href="#" className="hover:text-gray-200"><Instagram className="w-5 h-5"/></a>
+            <a href="https://www.linkedin.com/company/alqutbeegroup/" target="_blank" className="hover:text-[var(--gold-deep)]"><Linkedin className="w-5 h-5" /></a>
+            <a href="#" className="hover:text-[var(--gold-deep)]"><Twitter className="w-5 h-5" /></a>
+            <a href="#" className="hover:text-[var(--gold-deep)]"><Facebook className="w-5 h-5" /></a>
+            <a href="#" className="hover:text-[var(--gold-deep)]"><Instagram className="w-5 h-5"/></a>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
             </a>
 
             <button
-              className="lg:hidden text-amber-600 hover:bg-amber-50 p-2 rounded-lg transition-colors"
+              className="lg:hidden text-[var(--gold-deep)] hover:bg-amber-50 p-2 rounded-lg transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
@@ -99,7 +99,7 @@ const Navbar = () => {
                   <a
                     key={href}
                     href={href}
-                    className={`block py-2 text-lg ${activeSection === href.slice(1) ? 'text-amber-600' : 'text-gray-600'}`}
+                    className={`block py-2 text-lg ${activeSection === href.slice(1) ? 'text-[var(--gold-deep)]' : 'text-gray-600'}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {label}
