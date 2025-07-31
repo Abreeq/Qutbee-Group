@@ -35,7 +35,7 @@ const Hero = ({setIsOpen}) => {
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="heading heading-gradient mb-8 pb-3 px-10"
+                className="heading hero-heading-gradient mb-8 pb-3 px-10"
               >
                 Invest in Your Future with Qutbee Group
               </motion.h1>

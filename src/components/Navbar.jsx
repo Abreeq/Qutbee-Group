@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <>
       {/* 🔹 Top Bar */}
-      <div className="bg-[var(--gold-classic)] text-white py-3 hidden md:block">
+      <div className="bg-gradient-to-r from-[var(--gold-deep)] via-[var(--gold-classic)] to-black/80 text-white py-3 hidden md:block">
         <div className="container flex justify-between items-center text-sm">
           <div className="flex space-x-6">
             {/* <span>📞 +91 9876543210</span> */}
