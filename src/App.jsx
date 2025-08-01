@@ -1,9 +1,10 @@
 import React from 'react'
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Homepage from './pages/Homepage'
-import About from './pages/About'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Businesspage from './pages/Businesspage'
+import Investment from './pages/Investment'
 
 export default function App() {
 
@@ -27,8 +28,12 @@ export default function App() {
           element:<Homepage/>,
         },
         { 
-          path: "/about", 
-          element: <About />
+          path: "/business", 
+          element: <Businesspage />
+        },
+        { 
+          path: "/investment", 
+          element: <Investment/>
         }
        ]
       

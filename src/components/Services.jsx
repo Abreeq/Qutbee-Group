@@ -9,18 +9,28 @@ const Services = () => {
       title: "Real Estate Investment & Growth",
       desc: "Strategic real estate investments for sustainable growth and high returns.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      link: "https://qutbee.com/",
     },
     {
       icon: TrendingUp,
       title: "Cutting-Edge Tech Solutions",
       desc: "Innovative technology investments driving business transformation and scalability.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      link: "https://iqaraat.com/",
     },
     {
       icon: Users,
       title: "Expert Business Consulting",
       desc: "Tailored advisory services for strategic growth and competitive advantage.",
       image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      link: "https://labs.qutbee.com/"
+    },
+    {
+      icon: Briefcase,
+      title: "Expert Business Consulting",
+      desc: "Tailored advisory services for strategic growth and competitive advantage.",
+      image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      link: "https://qutbee.com/"
     },
   ];
 
@@ -40,7 +50,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 lg:gap-14 grid-cols-1 md:grid-cols-2 lg:px-12">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -59,10 +69,11 @@ const Services = () => {
                 />
                 <service.icon className="absolute bottom-4 right-4 w-8 h-8 text-white z-20" />
               </div>
-              <div className="p-6 text-center">
+              <div className="px-6 py-10 text-center">
                 <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed mb-4">{service.desc}</p>
-                <a href="#contact" className="inline-flex items-center text-[var(--gold-classic)] font-medium hover:text-[var(--gold-deep)]">
+                <a href={service.link} target='_blank' className="inline-flex items-center text-[var(--gold-classic)] py-1 pl-2
+                 font-medium  rounded-md hover:bg-[var(--gold-classic)] hover:text-white transition duration-300">
                   Learn More <ChevronRight className="ml-2" />
                 </a>
               </div>

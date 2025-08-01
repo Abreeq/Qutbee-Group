@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Menu as MenuIcon, X as XIcon, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from '../assets/Qutbeelogo.webp';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,11 +32,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
+    { href: '/', label: 'Home' },
     { href: '#about', label: 'About' },
     { href: '#vision', label: 'Vision' },
-    { href: '#business', label: 'Our Business' },
-    { href: '#investment', label: 'Investment' },
+    { href: '/business', label: 'Our Business' },
+    { href: '/investment', label: 'Investment' },
     { href: '#contact', label: 'Contact' }
   ];
 
@@ -74,13 +75,13 @@ const Navbar = () => {
 
             <div className="hidden lg:flex items-center gap-12">
               {navLinks.map(({ href, label }) => (
-                <a
+                <Link
                   key={href}
-                  href={href}
+                  to={href}
                   className={`nav-link ${activeSection === href.slice(1) ? 'active' : ''}`}
                 >
                   {label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -96,14 +97,14 @@ const Navbar = () => {
             >
               <div className="container py-6 space-y-4">
                 {navLinks.map(({ href, label }) => (
-                  <a
+                  <Link
                     key={href}
-                    href={href}
+                    to={href}
                     className={`block py-2 text-lg ${activeSection === href.slice(1) ? 'text-[var(--gold-deep)]' : 'text-gray-600'}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {label}
-                  </a>
+                  </Link>
                 ))}
                 {/* <a
                   href="#contact"

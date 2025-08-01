@@ -14,7 +14,7 @@ const Contact = () => {
       }}
       ></div>
 
-      <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8; relative">
+      <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
