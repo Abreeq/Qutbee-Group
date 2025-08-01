@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRightCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const opportunities = [
   {
@@ -25,7 +26,7 @@ const fadeInVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: "easeInOut" } },
 };
 
-const FullScreenInvestment = () => {
+const InvestmentOpportunities = () => {
   return (
     <section className="section relative w-full overflow-hidden">
        <motion.div
@@ -85,12 +86,13 @@ const FullScreenInvestment = () => {
 
               {/* Buttons */}
               <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <button className="px-6 py-2 bg-[var(--gold-classic)] text-white text-lg rounded-lg shadow-md hover:bg-[var(--gold-deep)] transition duration-300 flex items-center cursor-pointer justify-center gap-2">
+                <Link to="/investment" className="px-6 py-2 bg-[var(--gold-classic)] text-white text-lg rounded-lg shadow-md hover:bg-[var(--gold-deep)] transition duration-300 flex items-center cursor-pointer justify-center gap-2">
                   Invest Now <ArrowRightCircle className="w-5 h-5" />
-                </button>
-                <button className="px-6 py-2 border-2 border-[var(--gold-classic)] text-[var(--gold-classic)] text-lg cursor-pointer rounded-lg shadow-md hover:bg-[var(--gold-classic)] hover:text-white transition duration-300">
+                </Link>
+                
+                <Link to='/investment' className="px-6 py-2 border-2 border-[var(--gold-classic)] text-[var(--gold-classic)] text-lg cursor-pointer rounded-lg shadow-md hover:bg-[var(--gold-classic)] hover:text-white transition duration-300">
                   Learn More
-                </button>
+                </Link>
               </div>
             </motion.div>
           </motion.div>
@@ -100,4 +102,4 @@ const FullScreenInvestment = () => {
   );
 };
 
-export default FullScreenInvestment;
+export default InvestmentOpportunities;

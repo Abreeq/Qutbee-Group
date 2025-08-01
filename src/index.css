@@ -42,8 +42,12 @@
     @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold;
   }
 
+  .hero-heading-gradient {
+    @apply bg-gradient-to-br from-[var(--gold-deep)] to-black/80 bg-clip-text text-transparent;
+  }
+
   .heading-gradient {
-    @apply bg-gradient-to-r from-[var(--gold-deep)] to-[var(--gold-classic)] bg-clip-text text-transparent;
+    @apply bg-gradient-to-b from-[var(--gold-deep)] to-[var(--gold-classic)] bg-clip-text text-transparent;
   }
 
   .card {
