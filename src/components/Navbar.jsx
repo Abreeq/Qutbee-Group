@@ -62,9 +62,9 @@ const Navbar = () => {
       <nav className={`fixed w-full z-50 transition[top left] duration-300 ${isScrolled ? 'top-0 left-0 py-2 bg-white/90 backdrop-blur-md shadow-lg' : 'py-2 bg-transparent'}`}>
         <div className="container">
           <div className="flex items-center justify-between">
-            <a href="#" className="text-3xl font-bold heading-gradient">
+            <Link to="/" className="text-3xl font-bold heading-gradient">
               <img src={logo} alt="logo" className="h-20 w-auto object-contain"/>
-            </a>
+            </Link>
 
             <button
               className="lg:hidden text-[var(--gold-deep)] hover:bg-amber-50 p-2 rounded-lg transition-colors"

@@ -8,6 +8,7 @@ import InvestmentOpportunities from '../components/InvestmentOpportunities'
 import Contact from '../components/Contact'
 import Modal from '../components/Modal'
 import Scroll from '../components/Scroll'
+import OurVision from '../components/OurVision'
 
 export default function Homepage() {
    // For Pop-up
@@ -20,6 +21,7 @@ export default function Homepage() {
       <Services/>
       <AboutUs/>
       <Partners/>
+      <OurVision />
       <OurProjects/>
       <InvestmentOpportunities/>
       <Contact/>
