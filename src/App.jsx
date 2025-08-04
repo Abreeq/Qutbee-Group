@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Businesspage from './pages/Businesspage'
 import Investment from './pages/Investment'
+import Contact from './components/Contact'
 
 export default function App() {
 

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowRightCircle } from "lucide-react";
 import BusinessCards from '../components/BusinessCards';
 import Modal from '../components/Modal';
+import Scroll from '../components/Scroll';
 
 export default function Businesspage() {
 
@@ -90,6 +91,7 @@ export default function Businesspage() {
 
     {/* Modal for Popup */}
     <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}></Modal>
+    <Scroll/>
    </>
   )
 }
