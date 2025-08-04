@@ -10,6 +10,8 @@ import OurProjects from './components/OurProjects'
 import InvestmentOpportunities from './components/InvestmentOpportunities'
 import Modal from './components/Modal'
 import Partners from './components/Partners'
+import About from './pages/About'
+
 
 function App() {
   // For Pop-up
@@ -18,7 +20,7 @@ function App() {
   return (
     <>
     <div className="min-h-screen">
-     <Navbar />
+     <Navbar /> 
      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
      <Hero setIsOpen={setIsOpen}/>
      <Services />
@@ -26,11 +28,11 @@ function App() {
      <Partners/>
      <OurProjects />
      <InvestmentOpportunities />
-     {/* <About /> */}
      <Contact />
      <Footer />
+     <About />
      </div>
-
+     
 
     </>
   )
