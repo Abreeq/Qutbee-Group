@@ -10,7 +10,7 @@ import OurProjects from './components/OurProjects'
 import InvestmentOpportunities from './components/InvestmentOpportunities'
 import Modal from './components/Modal'
 import Partners from './components/Partners'
-import About from './pages/About'
+
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
      <InvestmentOpportunities />
      <Contact />
      <Footer />
-     <About />
+   
      </div>
      
 
