@@ -4,12 +4,21 @@ import vector from '../assets/vector.png';
 import about from '../assets/about1.png';
 import palm from '../assets/palm.png'
 import talk from '../assets/icon.png'
-
+import Counter from '../components/Counter'; 
 
 
 
 
 const AboutUs = () => {
+  const formatNumber = (number, label) => {
+    if (label === "Assets under holding") {
+      return `$${number.toLocaleString()} trillion`;
+    }
+    if (label === "Transactions every 24 hours") {
+      return `${number.toLocaleString()} million`;
+    }
+    return number.toLocaleString(); // Add commas for "New users annually"
+  };
   return (
     <section>
       {/* Hero Section */}
@@ -115,25 +124,59 @@ const AboutUs = () => {
 </section>
 
 
-     <div class="bg-gray-700 py-24 sm:py-20 ">
-  <div class="mx-auto max-w-7xl px-6 lg:px-6">
-    <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
-      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-        <dt class="text-base/7 " style={{ color: '#d2ac47' }} >Transactions every 24 hours</dt>
-        <dd class="order-first text-3xl font-semibold tracking-tight  sm:text-5xl" style={{ color: '#ae8625' }}>44 million</dd>
+     {/* <div class="bg-gray-700 py-24 sm:py-20 ">
+  <div className="mx-auto max-w-7xl px-6 lg:px-6">
+    <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+      <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+        <dt className="text-base/7 " style={{ color: '#d2ac47' }} >Transactions every 24 hours</dt>
+        <dd className="order-first text-3xl font-semibold tracking-tight  sm:text-5xl" style={{ color: '#ae8625' }}>44 million</dd>
       </div>
-      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-        <dt class="text-base/7 " style={{ color: '#d2ac47' }}>Assets under holding</dt>
-        <dd class="order-first text-3xl font-semibold tracking-tight  sm:text-5xl" style={{ color: '#ae8625' }}>$119 trillion</dd>
+      <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+        <dt className="text-base/7 " style={{ color: '#d2ac47' }}>Assets under holding</dt>
+        <dd className="order-first text-3xl font-semibold tracking-tight  sm:text-5xl" style={{ color: '#ae8625' }}>$119 trillion</dd>
       </div>
-      <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-        <dt class="text-base/7 " style={{ color: '#d2ac47' }}>New users annually</dt>
-        <dd class="order-first text-3xl font-semibold tracking-tight  sm:text-5xl" style={{ color: '#ae8625' }}>46,000</dd>
+      <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+        <dt className="text-base/7 " style={{ color: '#d2ac47' }}>New users annually</dt>
+        <dd className="order-first text-3xl font-semibold tracking-tight  sm:text-5xl" style={{ color: '#ae8625' }}>46,000</dd>
       </div>
     </dl>
   </div>
-</div>
+</div> */}
 
+
+<div className="bg-gray-700 py-24 sm:py-20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-6">
+        <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+          {/* 44 million */}
+          <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt className="text-base/7" style={{ color: '#d2ac47' }}>
+              Transactions every 24 hours
+            </dt>
+            <dd className="order-first text-3xl font-semibold tracking-tight sm:text-5xl" style={{ color: '#ae8625' }}>
+              <Counter from={0} to={44} duration={2} format={n => formatNumber(n, "Transactions every 24 hours")} />
+            </dd>
+          </div>
+          {/* $119 trillion */}
+          <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt className="text-base/7" style={{ color: '#d2ac47' }}>
+              Assets under holding
+            </dt>
+            <dd className="order-first text-3xl font-semibold tracking-tight sm:text-5xl" style={{ color: '#ae8625' }}>
+              <Counter from={0} to={119} duration={2.5} format={n => formatNumber(n, "Assets under holding")} />
+            </dd>
+          </div>
+          {/* 46,000 */}
+          <div className="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt className="text-base/7" style={{ color: '#d2ac47' }}>
+              New users annually
+            </dt>
+            <dd className="order-first text-3xl font-semibold tracking-tight sm:text-5xl" style={{ color: '#ae8625' }}>
+              <Counter from={0} to={46000} duration={3} format={n => formatNumber(n, "New users annually")} />
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
 
 {/* next section */}
 
@@ -146,42 +189,42 @@ const AboutUs = () => {
   
 </div>
 
-  <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2  lg:gap-y-10">
-    <div class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-      <div class="lg:pr-4">
-        <div class="lg:max-w-lg">
-          <p class="text-base/7 font-semibold text-indigo-600" style={{ color: '#ae8625' }}>Deploy faster</p>
-          <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl" style={{ color: '#ae8625' }}>Preparing for your success, we provide truly prominent IT solutions</h1>
-          <p class="mt-6 text-xl/8 text-gray-700" style={{ color: '#d2ac47' }}>Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.</p>
+  <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2  lg:gap-y-10">
+    <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+      <div className="lg:pr-4">
+        <div className="lg:max-w-lg">
+          <p className="text-base/7 font-semibold text-indigo-600" style={{ color: '#ae8625' }}>Deploy faster</p>
+          <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl" style={{ color: '#ae8625' }}>Preparing for your success, we provide truly prominent IT solutions</h1>
+          <p className="mt-6 text-xl/8 text-gray-700" style={{ color: '#d2ac47' }}>Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.</p>
         </div>
       </div>
     </div>
-    { <div class="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+    { <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
             <div>
-          <p class="mt-8" style={{ color: '#d2ac47' }}>Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.</p>
-          <h2 class="mt-16 text-2xl font-bold tracking-tight " style={{ color: '#ae8625' }}>No server? No problem.</h2>
-          <p class="mt-6" style={{ color: '#d2ac47' }}>Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.</p>
+          <p className="mt-8" style={{ color: '#d2ac47' }}>Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.</p>
+          <h2 className="mt-16 text-2xl font-bold tracking-tight " style={{ color: '#ae8625' }}>No server? No problem.</h2>
+          <p className="mt-6" style={{ color: '#d2ac47' }}>Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.</p>
             </div>
       {/* <img src={image} alt="" class="w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-228" /> */}
     </div> }
-    <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-      <div class="lg:pr-4">
-        <div class="max-w-xl text-base/7 text-gray-600 lg:max-w-lg" style={{ color: '#d2ac47' }}>
+    <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+      <div className="lg:pr-4">
+        <div className="max-w-xl text-base/7 text-gray-600 lg:max-w-lg" style={{ color: '#d2ac47' }}>
           <p>Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
-          <ul role="list" class="mt-8 space-y-8 text-gray-600">
-            <li class="flex gap-x-3">
+          <ul role="list" className="mt-8 space-y-8 text-gray-600">
+            <li className="flex gap-x-3">
               <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="mt-1 size-5 flex-none text-indigo-600"style={{ color: '#ae8625' }}>
                 <path d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z" clip-rule="evenodd" fill-rule="evenodd" />
               </svg>
               <span style={{ color: '#d2ac47' }}><strong class="font-semibold text-gray-900" style={{ color: '#ae8625' }} >Push to deploy.</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</span>
             </li>
-            <li class="flex gap-x-3">
+            <li className="flex gap-x-3">
               <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="mt-1 size-5 flex-none text-indigo-600"style={{ color: '#ae8625' }}>
                 <path d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z" clip-rule="evenodd" fill-rule="evenodd" />
               </svg>
               <span style={{ color: '#d2ac47' }}><strong class="font-semibold text-gray-900" style={{ color: '#ae8625' }}>SSL certificates.</strong> Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</span>
             </li>
-            <li class="flex gap-x-3">
+            <li className="flex gap-x-3">
               <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="mt-1 size-5 flex-none text-indigo-600" style={{ color: '#ae8625' }}>
                 <path d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" />
                 <path d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z" clip-rule="evenodd" fill-rule="evenodd" />
