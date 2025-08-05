@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import React from "react";
+import bgblack from '../assets/bgblack.svg'
 
 const cards = [
   {
@@ -48,14 +49,21 @@ const cards = [
 
 export default function BusinessCards() {
   return (
-    <div className="section bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+    // <div className="section bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="section relative py-16 px-4 sm:px-6 lg:px-8">
+
+          <div
+            className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-20"
+            style={{ backgroundImage: `url(${bgblack})` }}
+          ></div>
+
        <div className="container">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {cards.map((card, id) => {
                 const isSixAndWide = cards.length === 6 && (id === 4 || id === 5);
                 return (
                     <div key={id}
-                        className={`group bg-white rounded-lg shadow-md shadow-[rgba(210,172,71,0.2)] p-5 flex flex-col items-center text-center transition hover:shadow-2xl hover:-translate-y-1 ${
+                        className={`group bg-white rounded-lg shadow-md shadow-[rgba(210,172,71,0.2)] p-5 flex flex-col items-center text-center border border-[var(--gold-classic)]/30 transition hover:shadow-2xl hover:-translate-y-1 ${
                             isSixAndWide ? "lg:col-span-2" : ""
                         }`}
                     >
