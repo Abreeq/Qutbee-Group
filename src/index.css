@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @tailwind utilities;
 
 @layer base {
@@ -14,6 +15,8 @@
   body {
     font-family: 'Poppins', sans-serif;
     @apply bg-white text-gray-900;
+      font-family: "Poppins";
+      
   }
 
   ::selection {
@@ -27,6 +30,7 @@
   }
   
   .btn {
+    
     @apply inline-flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300;
   }
   
@@ -39,6 +43,7 @@
   }
 
   .heading {
+    
     @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold;
   }
 
