@@ -47,3 +47,8 @@
   .progress-fill {
     transform-origin: left;
   }
+  @media only screen and (max-width:767px){
+    .swiper-pagination{
+      bottom: 8px !important;
+    }
+  }

@@ -1,46 +1,50 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react'
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Homepage from './pages/Homepage'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import AboutUs from './components/AboutUs'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
-import OurProjects from './components/OurProjects'
-import InvestmentOpportunities from './components/InvestmentOpportunities'
-import Modal from './components/Modal'
-import Partners from './components/Partners'
+import Businesspage from './pages/Businesspage'
+import Investment from './pages/Investment'
 import About from './pages/About'
 
+export default function App() {
 
-function App() {
-  // For Pop-up
-  const [isOpen, setIsOpen] = useState(false);
+  function MainLayout(){
+    return (
+      <>
+        <Navbar/>
+        <Outlet/>
+        <Footer/>
+      </>
+    )
+  }
 
+  const routes = createBrowserRouter([
+    {
+       path:'/',
+       element:<MainLayout/>,
+       children:[
+        {
+          path:'',
+          element:<Homepage/>,
+        },
+        { 
+          path: "/business", 
+          element: <Businesspage />
+        },
+        { 
+          path: "/investment", 
+          element: <Investment/>
+        },
+        {
+          path: "/About",
+          element: <About/>
+        }
+       ]
+      
+    }
+  ])
   return (
-    <>
-    <div className="min-h-screen">
-     <Navbar /> 
-     <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />
-     <Hero setIsOpen={setIsOpen}/>
-     <Services />
-     <AboutUs />
-     <Partners/>
-     <OurProjects />
-     <InvestmentOpportunities />
-     <Contact />
-     <Footer />
-    <About/>
-     </div>
-     
-
-    </>
+    <RouterProvider router={routes}></RouterProvider>
   )
 }
-
-export default App
-
-
-
-
-

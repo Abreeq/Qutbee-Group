@@ -5,7 +5,7 @@ import about from '../assets/about1.png';
 import palm from '../assets/palm.png'
 import talk from '../assets/icon.png'
 import Counter from '../components/Counter'; 
-
+import { Headset } from 'lucide-react';
 
 
 
@@ -48,8 +48,8 @@ const AboutUs = () => {
           </div>
 
           <div className="mx-auto max-w-2xl py-30 sm:py-48 lg:py-45 text-center">
-            <h1 className="heading mb-6  " style={{ color: '#ae8625' }}>About Us</h1>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto" style={{ color: '#d2ac47' }}>
+            <h1 className="heading mb-6 hero-heading-gradient ">About Us</h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto" >
               Legacy of Excellence in Investment Management
             </p>
           </div>
@@ -75,7 +75,7 @@ const AboutUs = () => {
         <h2 className="text-3xl font-semibold mb-4" style={{ color: '#ae8625' }}>
           Strategic minds. Bold moves. Lasting impact.
         </h2>
-        <p className="text-xl leading-relaxed max-w-3xl mx-auto" style={{ color: '#d2ac47' }}>
+        <p className="text-xl leading-relaxed max-w-3xl mx-auto text-gray-600">
           We bring together strategic thinking, bold execution, and a commitment to creating lasting impact across every venture.
         </p>
       </section>
@@ -115,7 +115,7 @@ const AboutUs = () => {
       <h2 className="text-3xl font-semibold mb-4" style={{ color: '#ae8625' }}>
         Our Mission
       </h2>
-      <p className="text-xl leading-relaxed" style={{ color: '#d2ac47' }}>
+      <p className="text-xl leading-relaxed text-gray-600" >
         Working on our mission and subsequently chasing our vision, where we madly chase our mission to empower bold ideas in order to speed up business transformation. Guiding tech investments at every step — real estate and business consulting — we create powerful impact across UAE and beyond. We invest in what matters: people, purpose, and performance.
       </p>
     </div>
@@ -180,7 +180,7 @@ const AboutUs = () => {
 
 {/* next section */}
 
-<div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+<div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
   {/* background vector pattern */}
 <div
   className="absolute inset-0 -z-10 overflow-hidden bg-no-repeat bg-center bg-cover"
@@ -194,42 +194,42 @@ const AboutUs = () => {
       <div className="lg:pr-4">
         <div className="lg:max-w-lg">
           <p className="text-base/7 font-semibold text-indigo-600" style={{ color: '#ae8625' }}>Deploy faster</p>
-          <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl" style={{ color: '#ae8625' }}>Preparing for your success, we provide truly prominent IT solutions</h1>
-          <p className="mt-6 text-xl/8 text-gray-700" style={{ color: '#d2ac47' }}>Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.</p>
+          <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl text-gray-600" style={{ color: '#ae8625' }}>Preparing for your success, we provide truly prominent IT solutions</h1>
+          <p className="mt-6 text-xl/8 text-gray-600" >Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas.</p>
         </div>
       </div>
     </div>
     { <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
             <div>
-          <p className="mt-8" style={{ color: '#d2ac47' }}>Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.</p>
+          <p className="mt-8 text-gray-600" >Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.</p>
           <h2 className="mt-16 text-2xl font-bold tracking-tight " style={{ color: '#ae8625' }}>No server? No problem.</h2>
-          <p className="mt-6" style={{ color: '#d2ac47' }}>Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.</p>
+          <p className="mt-6 text-gray-600 " >Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.</p>
             </div>
       {/* <img src={image} alt="" class="w-3xl max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-228" /> */}
     </div> }
     <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
       <div className="lg:pr-4">
-        <div className="max-w-xl text-base/7 text-gray-600 lg:max-w-lg" style={{ color: '#d2ac47' }}>
+        <div className="max-w-xl text-base/7 text-gray-600 lg:max-w-lg" >
           <p>Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.</p>
           <ul role="list" className="mt-8 space-y-8 text-gray-600">
             <li className="flex gap-x-3">
-              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="mt-1 size-5 flex-none text-indigo-600"style={{ color: '#ae8625' }}>
+              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" className="mt-1 size-5 flex-none text-indigo-600"style={{ color: '#ae8625' }}>
                 <path d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z" clip-rule="evenodd" fill-rule="evenodd" />
               </svg>
-              <span style={{ color: '#d2ac47' }}><strong class="font-semibold text-gray-900" style={{ color: '#ae8625' }} >Push to deploy.</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</span>
+              <span className= "text-gray-600"><strong className="font-semibold text-gray-900" style={{ color: '#ae8625' }} >Push to deploy.</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</span>
             </li>
             <li className="flex gap-x-3">
-              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="mt-1 size-5 flex-none text-indigo-600"style={{ color: '#ae8625' }}>
+              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" className="mt-1 size-5 flex-none text-indigo-600"style={{ color: '#ae8625' }}>
                 <path d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z" clip-rule="evenodd" fill-rule="evenodd" />
               </svg>
-              <span style={{ color: '#d2ac47' }}><strong class="font-semibold text-gray-900" style={{ color: '#ae8625' }}>SSL certificates.</strong> Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</span>
+              <span className="text-gray-600"><strong className="font-semibold text-gray-900" style={{ color: '#ae8625' }}>SSL certificates.</strong> Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</span>
             </li>
             <li className="flex gap-x-3">
-              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="mt-1 size-5 flex-none text-indigo-600" style={{ color: '#ae8625' }}>
+              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" className="mt-1 size-5 flex-none text-indigo-600" style={{ color: '#ae8625' }}>
                 <path d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" />
                 <path d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z" clip-rule="evenodd" fill-rule="evenodd" />
               </svg>
-              <span style={{ color: '#d2ac47' }}><strong class="font-semibold text-gray-900" style={{ color: '#ae8625' }}>Database backups.</strong> Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</span>
+              <span className="text-gray-600"><strong className="font-semibold text-gray-900" style={{ color: '#ae8625' }}>Database backups.</strong> Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</span>
             </li>
           </ul>
       </div>
@@ -243,42 +243,24 @@ const AboutUs = () => {
 
 
 
-<div className="relative py-16 sm:py-20 bg-white">
-  {/* Optional background image */}
-  {/* <div
-    className="absolute inset-0 -z-10 overflow-hidden bg-no-repeat bg-center bg-cover"
-    style={{ backgroundImage: `url(${vector})`, opacity: 0.5 }}
-  ></div> */}
 
-  <div className="mx-auto max-w-6xl px-4 sm:px-10 py-10 bg-gray-700 rounded-md w-full">
-    <div className="flex flex-col items-center sm:items-start sm:flex-row sm:justify-between gap-6 relative">
-      
-      {/* Icon Bubble */}
-      <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[#0a1534] rounded-full shadow-lg flex items-center justify-center -mt-10 sm:-mt-16">
-        <img
-          src={talk}
-          alt="Support Icon"
-          className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
-        />
-      </div>
 
-      {/* Heading Text */}
-      <dd className="text-center sm:text-left text-2xl sm:text-4xl font-semibold tracking-tight text-[#ae8625]">
-        We will Deliver you the<br /> best experience
-      </dd>
 
-      {/* Phone Button */}
-      <div className="flex justify-center sm:justify-end">
-        <a
-          href="#"
-          className="inline-block rounded-md bg-indigo-600 px-6 py-3 text-base sm:text-xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600"
-        >
-          +91 9149976788
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+
+<div className="container py-10">
+            <div className="relative bg-gradient-to-b from-white/50 to-white/30 backdrop-blur-lg shadow-[0_8px_32px_rgba(210,172,71,0.5)] border border-[var(--gold-classic)]/60 rounded-md gap-6 sm:gap-10 flex flex-col lg:flex-row items-center justify-center px-4 py-18">
+                  <h3 className='text-3xl md:text-5xl font-semibold mb-1 text-center md:text-left text-[var(--gold-classic)] max-w-xl'> 
+                    We will Deliver you the best experience
+                  </h3>
+                  <a href='tel:+919149976788' className="px-6 md:px-8 py-4 md:py-5 bg-[var(--gold-classic)] font-semibold text-lg md:text-xl text-white rounded-lg shadow-md hover:bg-[var(--gold-deep)] transition duration-300">
+                    +91 9149976788
+                  </a>
+                  {/* icon */}
+                  <div className='absolute -top-8 left-1/2 transform md:left-8 -translate-x-1/2 md:translate-x-0 text-white bg-[var(--gold-classic)] rounded-full w-24 h-24 flex items-center justify-center'>
+                    <Headset className='w-10 h-10'/>
+                  </div>
+            </div>
+        </div>
 
 
 

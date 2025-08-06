@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Menu as MenuIcon, X as XIcon, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import logo from '../assets/Qutbeelogo.webp';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,42 +32,42 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
+    { href: '/', label: 'Home' },
+    { href: '/About', label: 'About' },
     { href: '#vision', label: 'Vision' },
-    { href: '#business', label: 'Our Business' },
-    { href: '#investment', label: 'Investment' },
+    { href: '/business', label: 'Our Business' },
+    { href: '/investment', label: 'Investment' },
     { href: '#contact', label: 'Contact' }
   ];
 
   return (
     <>
       {/* 🔹 Top Bar */}
-      <div className="bg-amber-600 text-white py-2 hidden md:block">
+      <div className="bg-gradient-to-r from-[var(--gold-deep)] via-[var(--gold-classic)] to-black/80 text-white py-3 hidden md:block">
         <div className="container flex justify-between items-center text-sm">
           <div className="flex space-x-6">
             {/* <span>📞 +91 9876543210</span> */}
             <span>✉️ business@qutbee.com</span>
           </div>
           <div className="flex space-x-4">
-            <a href="https://www.linkedin.com/company/alqutbeegroup/" target="_blank" className="hover:text-gray-200"><Linkedin className="w-5 h-5" /></a>
-            <a href="#" className="hover:text-gray-200"><Twitter className="w-5 h-5" /></a>
-            <a href="#" className="hover:text-gray-200"><Facebook className="w-5 h-5" /></a>
-            <a href="#" className="hover:text-gray-200"><Instagram className="w-5 h-5"/></a>
+            <a href="https://www.linkedin.com/company/alqutbeegroup/" target="_blank" className="hover:text-[var(--gold-deep)]"><Linkedin className="w-5 h-5" /></a>
+            <a href="#" className="hover:text-[var(--gold-deep)]"><Twitter className="w-5 h-5" /></a>
+            <a href="#" className="hover:text-[var(--gold-deep)]"><Facebook className="w-5 h-5" /></a>
+            <a href="#" className="hover:text-[var(--gold-deep)]"><Instagram className="w-5 h-5"/></a>
           </div>
         </div>
       </div>
 
       {/* 🔹 Navbar */}
-      <nav className={`fixed w-full z-50 transition[top left] duration-300 ${isScrolled ? 'top-0 left-0 py-1 bg-white/90 backdrop-blur-md shadow-lg' : 'py-6 bg-transparent'}`}>
+      <nav className={`fixed w-full z-50 transition[top left] duration-300 ${isScrolled ? 'top-0 left-0 py-2 bg-white/90 backdrop-blur-md shadow-lg' : 'py-2 bg-transparent'}`}>
         <div className="container">
           <div className="flex items-center justify-between">
-            <a href="#" className="text-3xl font-bold heading-gradient">
+            <Link to="/" className="text-3xl font-bold heading-gradient">
               <img src={logo} alt="logo" className="h-20 w-auto object-contain"/>
-            </a>
+            </Link>
 
             <button
-              className="lg:hidden text-amber-600 hover:bg-amber-50 p-2 rounded-lg transition-colors"
+              className="lg:hidden text-[var(--gold-deep)] hover:bg-amber-50 p-2 rounded-lg transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
@@ -74,13 +75,13 @@ const Navbar = () => {
 
             <div className="hidden lg:flex items-center gap-12">
               {navLinks.map(({ href, label }) => (
-                <a
+                <Link
                   key={href}
-                  href={href}
+                  to={href}
                   className={`nav-link ${activeSection === href.slice(1) ? 'active' : ''}`}
                 >
                   {label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -96,14 +97,14 @@ const Navbar = () => {
             >
               <div className="container py-6 space-y-4">
                 {navLinks.map(({ href, label }) => (
-                  <a
+                  <Link
                     key={href}
-                    href={href}
-                    className={`block py-2 text-lg ${activeSection === href.slice(1) ? 'text-amber-600' : 'text-gray-600'}`}
+                    to={href}
+                    className={`block py-2 text-lg ${activeSection === href.slice(1) ? 'text-[var(--gold-deep)]' : 'text-gray-600'}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {label}
-                  </a>
+                  </Link>
                 ))}
                 {/* <a
                   href="#contact"

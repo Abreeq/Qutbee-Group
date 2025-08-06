@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRightCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const opportunities = [
   {
@@ -25,7 +26,7 @@ const fadeInVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 1.2, ease: "easeInOut" } },
 };
 
-const FullScreenInvestment = () => {
+const InvestmentOpportunities = () => {
   return (
     <section className="section relative w-full overflow-hidden">
        <motion.div
@@ -34,69 +35,71 @@ const FullScreenInvestment = () => {
           viewport={{ once: false, amount: 0.5 }}
           className="text-center"
         >
-          <span className="text-amber-600 font-semibold text-lg md:text-xl mb-4 block">
+          <span className="text-[var(--gold-deep)] font-semibold text-lg md:text-xl mb-4 block">
             Our Investments
           </span>
           <h2 className="heading text-gray-800 mb-6">
-           Smart <span className="text-amber-600">Investments</span> for Lasting Growth
+           Smart <span className="text-[var(--gold-classic)]">Investments</span> for Lasting Growth
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-          Discover our <span className="text-amber-600 font-semibold">portfolio</span> focused on sustainable value.
+          Discover our <span className="text-[var(--gold-classic)] font-semibold">portfolio</span> focused on sustainable value.
           </p>
         </motion.div>
 
-      {opportunities.map((item, index) => (
-        <motion.div
-          key={index}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.3 }}
-          variants={fadeInVariants}
-          className={`relative flex flex-col md:flex-row items-center h-screen w-full px-8 md:px-20 ${
-            index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-          }`}
-        >
-          {/* Image Section */}
+        {opportunities.map((item, index) => (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full md:w-1/2 h-[55%] md:h-[65%]"
+            key={index}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            variants={fadeInVariants}
+            className={`relative flex flex-col lg:flex-row items-center gap-10 my-10 md:my-14 px-4 xl:px-10
+            ${ index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse" }`}
           >
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-full object-cover rounded-xl shadow-lg"
-            />
-          </motion.div>
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="w-full lg:w-1/2 h-[300px] lg:h-[460px] overflow-hidden rounded-xl shadow-lg"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
 
-          {/* Text Section */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
-              <span className="text-amber-600">{item.title}</span>
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600 mt-6 leading-relaxed">
-              {item.desc}
-            </p>
-            {/* Buttons */}
-            <div className="mt-8 flex gap-4">
-              <button className="px-8 py-3 bg-amber-600 text-white text-lg rounded-lg shadow-md hover:bg-amber-700 transition duration-300 flex items-center gap-2">
-                Invest Now <ArrowRightCircle className="w-5 h-5" />
-              </button>
-              <button className="px-8 py-3 border-2 border-amber-600 text-amber-600 text-lg rounded-lg shadow-md hover:bg-amber-600 hover:text-white transition duration-300">
-                Learn More
-              </button>
-            </div>
+            {/* Text */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="w-full lg:w-1/2"
+            >
+              <h2 className="text-2xl md:text-4xl font-bold text-[var(--gold-classic)] text-center md:text-left">
+                {item.title}
+              </h2>
+              <p className="text-base md:text-lg text-gray-600 mt-4 md:mt-6 leading-relaxed text-justify md:text-left">
+                {item.desc}
+              </p>
+
+              {/* Buttons */}
+              <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Link to="/investment" className="px-6 py-2 bg-[var(--gold-classic)] text-white text-lg rounded-lg shadow-md hover:bg-[var(--gold-deep)] transition duration-300 flex items-center cursor-pointer justify-center gap-2">
+                  Invest Now <ArrowRightCircle className="w-5 h-5" />
+                </Link>
+                
+                <Link to='/investment' className="px-6 py-2 border-2 border-[var(--gold-classic)] text-[var(--gold-classic)] text-lg cursor-pointer rounded-lg shadow-md hover:bg-[var(--gold-classic)] hover:text-white transition duration-300">
+                  Learn More
+                </Link>
+              </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
-      ))}
+        ))}
+        
     </section>
   );
 };
 
-export default FullScreenInvestment;
+export default InvestmentOpportunities;
