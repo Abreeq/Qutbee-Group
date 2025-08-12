@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Businesspage from './pages/Businesspage'
 import Investment from './pages/Investment'
-import Contact from './components/Contact'
+import About from './pages/About'
 
 export default function App() {
 
@@ -35,6 +35,10 @@ export default function App() {
         { 
           path: "/investment", 
           element: <Investment/>
+        },
+        {
+          path: "/About",
+          element: <About/>
         }
        ]
       
