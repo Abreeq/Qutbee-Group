@@ -40,6 +40,8 @@ const Navbar = () => {
     { href: '#contact', label: 'Contact' }
   ];
 
+ 
+  
   return (
     <>
       {/* 🔹 Top Bar */}
@@ -84,6 +86,7 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
+
           </div>
         </div>
 
