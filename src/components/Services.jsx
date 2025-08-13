@@ -75,8 +75,8 @@ const Services = () => {
             className="pb-12"
           >
             {services.map((service, id) => (
-              <SwiperSlide key={id} className="!opacity-100 !scale-100 h-auto">
-                <div className="h-full min-h-[430px] flex flex-col group bg-white rounded-lg border border-[rgba(210,172,71,0.4)] overflow-hidden shadow-lg shadow-[rgba(210,172,71,0.4)] hover:shadow-xl transition-shadow duration-300">
+              <SwiperSlide key={id} className="!opacity-100 !scale-100 h-auto mb-7">
+                <div className="h-full min-h-[400px] flex flex-col group bg-white rounded-lg border border-[rgba(210,172,71,0.4)] overflow-hidden shadow-lg shadow-[rgba(210,172,71,0.4)] hover:shadow-xl transition-shadow duration-300">
                   <div className="relative h-56 md:h-48 lg:h-56 overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
                     <img 
