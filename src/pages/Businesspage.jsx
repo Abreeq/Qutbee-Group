@@ -5,6 +5,7 @@ import BusinessCards from '../components/BusinessCards';
 import Modal from '../components/Modal';
 import Scroll from '../components/Scroll';
 
+
 export default function Businesspage() {
 
  // For Pop-up

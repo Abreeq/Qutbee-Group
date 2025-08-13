@@ -6,8 +6,8 @@ import palm from '../assets/palm.png'
 import talk from '../assets/icon.png'
 import Counter from '../components/Counter'; 
 import { Headset } from 'lucide-react';
-
-
+import { motion } from "framer-motion";
+import background from '../assets/background.svg'
 
 const AboutUs = () => {
   const formatNumber = (number, label) => {
@@ -22,52 +22,43 @@ const AboutUs = () => {
   return (
     <section>
       {/* Hero Section */}
-      <div className="bg-white" >
-        <div className="relative isolate h-[510px] px-6 pt-14 lg:px-10">
+    <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-amber-50/80 to-white pointer-events-none pt-7" />
+        <div className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            opacity: 0.1,
+          }}
+        />
 
+        <div className="container pt-32 pb-20 relative">
+            <div className="text-center max-w-5xl mx-auto">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="heading hero-heading-gradient mb-8 pb-3 px-10"
+              >
+                About Us
+              </motion.h1>
 
-        
-<div
-  className="absolute inset-0 -z-10 overflow-hidden bg-no-repeat bg-center bg-cover"
-  style={{ backgroundImage: `url(${vector})`, opacity: 0.5 }}
->
-  
-</div>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto"
+              >
+                Legacy of Excellence in Investment Management <br/> At Qutbee, we set the standard for visionary investment solution merging experience, innovation, and strategic insight to create lasting success.
+              </motion.p>
 
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          >
-            {/* <div
-              style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-              className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            ></div> */}
-          </div>
-
-          <div className="mx-auto max-w-2xl py-30 sm:py-48 lg:py-45 text-center">
-            <h1 className="heading mb-6 hero-heading-gradient ">About Us</h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto" >
-              Legacy of Excellence in Investment Management
-            </p>
-          </div>
-
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-          >
-            {/* <div
-              style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-              className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-            ></div> */}
-          </div>
+            </div>
         </div>
-      </div>
+    </section>
+    
+
+
 
       {/* Section 1: Strategy Text Only */}
       <section className=" relative py-16 px-4 sm:px-8 lg:px-16 text-center">
@@ -86,16 +77,13 @@ const AboutUs = () => {
 
 
       {/* Section 2: Mission + Image Grid */}
-<section className="py-16 px-4 sm:px-8 lg:px-16">
-  <div className=" relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<section className=" relative  py-16 px-4 sm:px-8 lg:px-16">
+  <div className=" grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
     {/* background vector pattern */}
 {/* background image */}
-<div
-  className="absolute inset-0 -z-10 overflow-hidden bg-no-repeat bg-center bg-cover"
-  style={{ backgroundImage: `url(${vector})`, opacity: 0.5 }}
->
-  
-</div>
+       <div className="absolute inset-0 -z-10 overflow-hidden bg-no-repeat bg-center bg-cover"
+            style={{ backgroundImage: `url(${background})`, opacity: 0.2 }}
+        ></div>
 
 
 
@@ -182,12 +170,10 @@ const AboutUs = () => {
 
 <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
   {/* background vector pattern */}
-<div
-  className="absolute inset-0 -z-10 overflow-hidden bg-no-repeat bg-center bg-cover"
-  style={{ backgroundImage: `url(${vector})`, opacity: 0.5}}
->
   
-</div>
+       <div className="absolute inset-0 -z-10 overflow-hidden bg-no-repeat bg-center bg-cover"
+            style={{ backgroundImage: `url(${background})`, opacity: 0.2 }}
+        ></div>
 
   <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2  lg:gap-y-10">
     <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -236,18 +222,8 @@ const AboutUs = () => {
         </div>
     </div>
   </div>
-</div>
 
-
-
-
-
-
-
-
-
-
-<div className="container py-10">
+  <div className="container py-10">
             <div className="relative bg-gradient-to-b from-white/50 to-white/30 backdrop-blur-lg shadow-[0_8px_32px_rgba(210,172,71,0.5)] border border-[var(--gold-classic)]/60 rounded-md gap-6 sm:gap-10 flex flex-col lg:flex-row items-center justify-center px-4 py-18">
                   <h3 className='text-3xl md:text-5xl font-semibold mb-1 text-center md:text-left text-[var(--gold-classic)] max-w-xl'> 
                     We will Deliver you the best experience
@@ -261,6 +237,18 @@ const AboutUs = () => {
                   </div>
             </div>
         </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

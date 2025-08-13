@@ -28,10 +28,23 @@ const Footer = () => {
                   <span className="sr-only">LinkedIn</span>
                   <Linkedin className="w-5 h-5 text-white hover:text-[var(--gold-soft)]" />
                 </a>
-                <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
+                
+                {/* twitter logo */}
+                <a
+                  href="#"
+                  className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
+                >
                   <span className="sr-only">Twitter</span>
-                  <Twitter className="w-5 h-5 text-white hover:text-[var(--gold-soft)]" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-5 h-5 text-white hover:text-[var(--gold-soft)]"
+                  >
+                    <path d="M18.154 2H21.8L14.4 10.152L23.2 22H16.46L11.168 15.184L5.2 22H1.546L9.446 13.304L1 2H7.96L12.728 8.312L18.154 2ZM16.888 20H18.748L7.412 3.888H5.434L16.888 20Z" />
+                  </svg>
                 </a>
+
                 <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
                   <span className="sr-only">Twitter</span>
                   <Facebook className="w-5 h-5 text-white hover:text-[var(--gold-soft)]" />
