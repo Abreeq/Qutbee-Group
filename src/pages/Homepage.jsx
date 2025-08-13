@@ -20,10 +20,10 @@ export default function Homepage() {
       <Scroll/>
       <Services/>
       <AboutUs/>
-      <Partners/>
+      {/* <Partners/> */}
       <OurVision />
       <OurProjects/>
-      <InvestmentOpportunities/>
+      {/* <InvestmentOpportunities/> */}
       <Contact/>
     </>
   )

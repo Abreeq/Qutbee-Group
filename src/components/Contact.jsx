@@ -70,9 +70,22 @@ const Contact = () => {
                 
               {/* social icons */}
               <div className='flex items-center mt-10 space-x-4 flex-wrap space-y-3 sm:space-y-0'>
-                <a href='#' target='_blank' className="border border-[var(--gold-classic)]/40 flex items-center justify-center rounded-xl p-3 bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-md shadow-[0_4px_16px_rgba(210,172,71,0.12)] hover:shadow-[0_6px_20px_rgba(210,172,71,0.2)] hover:border-[var(--gold-classic)]/60 transition-all duration-200">
-                  <Twitter className="w-6 h-6 text-[var(--gold-deep)]" />
-                </a>
+                
+              <a
+                href="#"
+                target="_blank"
+                className="border border-[var(--gold-classic)]/40 flex items-center justify-center rounded-xl p-3 bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-md shadow-[0_4px_16px_rgba(210,172,71,0.12)] hover:shadow-[0_6px_20px_rgba(210,172,71,0.2)] hover:border-[var(--gold-classic)]/60 transition-all duration-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6 text-[var(--gold-deep)]"
+                >
+                  <path d="M18.154 2H21.8L14.4 10.152L23.2 22H16.46L11.168 15.184L5.2 22H1.546L9.446 13.304L1 2H7.96L12.728 8.312L18.154 2ZM16.888 20H18.748L7.412 3.888H5.434L16.888 20Z" />
+                </svg>
+              </a>
+
                 <a href='#' target='_blank' className="border border-[var(--gold-classic)]/40 flex items-center justify-center rounded-xl p-3 bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-md shadow-[0_4px_16px_rgba(210,172,71,0.12)] hover:shadow-[0_6px_20px_rgba(210,172,71,0.2)] hover:border-[var(--gold-classic)]/60 transition-all duration-200">
                   <Facebook className="w-6 h-6 text-[var(--gold-deep)]" />
                 </a>
@@ -140,8 +153,8 @@ const Contact = () => {
                 <Mail className="w-5 sm:w-6 h-5 sm:h-6 text-[var(--gold-deep)]" />
               </span>
               <h3 className="text-lg sm:text-xl font-bold my-2 text-[var(--gold-deep)]">Email Us</h3>
-              <p className="text-gray-600">info@qutbee.com</p>
-              <p className="text-gray-600">support@qutbee.com</p>
+              <p className="text-gray-600">business@qutbee.com </p>
+              <p className="text-gray-600">group@qutbee.com</p>
             </div>
 
             {/* Call */}
@@ -160,8 +173,8 @@ const Contact = () => {
                 <MapPin className="w-5 sm:w-6 h-5 sm:h-6 text-[var(--gold-deep)]" />
               </span>
               <h3 className="text-lg sm:text-xl font-bold my-2 text-[var(--gold-deep)]">Visit Us</h3>
-              <p className="text-gray-600">Abu Dhabi</p>
-              <p className="text-gray-600">United Arab Emirates</p>
+              <p className="text-gray-600">ABU DHABI, UAE</p>
+              <p className="text-gray-600">Srinagar, India</p>
             </div>
           </div>
 

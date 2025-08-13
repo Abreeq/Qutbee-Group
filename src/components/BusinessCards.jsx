@@ -1,61 +1,68 @@
 import { ChevronRight } from "lucide-react";
 import React from "react";
 import bgblack from '../assets/bgblack.svg'
+import background from '../assets/background.svg'
+import Tech from '../assets/Qutbee Logo.png'
+import Iqaraat from '../assets/Iqaraat Logo 2.png'
+import Biznis from '../assets/Biznis360 Logo.png'
+import Labs from '../assets/Qutbee Labs Logo.png'
+
 
 const cards = [
   {
     heading: "Qutbee Technologies",
     description: "We offer a comprehensive range of managed IT support packages for all sizes of business.",
-    image: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    buttonText: "Learn More",
-    buttonLink: "#1",
+    image: Tech,
+    buttonText: "Visit Website ",
+    buttonLink: "https://qutbee.com/",
   },
   {
     heading: "Iqaraat",
     description: "We offer a comprehensive range of managed IT support packages for all sizes of business.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    buttonText: "Learn More",
-    buttonLink: "#2",
+    image: Iqaraat,
+    buttonText: "Visit Website ",
+    buttonLink: "https://iqaraat.com/",
   },
   {
     heading: "Biznis360",
     description: "We offer a comprehensive range of managed IT support packages for all sizes of business.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    buttonText: "Learn More",
-    buttonLink: "#3",
+    image: Biznis,
+    buttonText: "Visit Website ",
+    buttonLink: "biznis360.com",
   },
   {
     heading: "Qutbee Labs",
     description: "Strategic real estate investments for sustainable growth and high returns.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    buttonText: "Learn More",
-    buttonLink: "#4",
+    image: Labs,
+    buttonText: "Visit Website ",
+    buttonLink: "https://labs.qutbee.com/",
   },
   {
     heading: "Expert Business Consulting",
     description: "Innovative technology investments driving business transformation and scalability.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    buttonText: "Learn More",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    buttonText: "Visit Website ",
     buttonLink: "#5",
   },
   {
     heading: "Qutbee Technologies",
     description: "Tailored advisory services for strategic growth and competitive advantage.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    buttonText: "Learn More",
+    buttonText: "Visit Website ",
     buttonLink: "#6",
   },
 ];
+
+
 
 export default function BusinessCards() {
   return (
     // <div className="section bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
       <div className="section relative py-16 px-4 sm:px-6 lg:px-8">
 
-          <div
-            className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-20"
-            style={{ backgroundImage: `url(${bgblack})` }}
-          ></div>
+       <div className="absolute inset-0 -z-10 overflow-hidden bg-no-repeat bg-center bg-cover"
+            style={{ backgroundImage: `url(${background})`, opacity: 0.2 }}
+        ></div>
 
        <div className="container">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -74,7 +81,7 @@ export default function BusinessCards() {
                             <img
                             src={card.image}
                             alt={card.heading}
-                            className="w-20 h-20 object-cover rounded-full transition-transform duration-300 group-hover:-translate-y-3 group-hover:rotate-10 z-10 shadow"
+                            className="w-20 h-20 object-contain p-1 rounded-full transition-transform duration-300 group-hover:-translate-y-3 group-hover:rotate-10 z-10 shadow"
                             />
                         </div>
                         

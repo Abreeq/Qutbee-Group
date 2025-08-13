@@ -58,7 +58,18 @@ const Navbar = () => {
           </div>
           <div className="flex space-x-4">
             <a href="https://www.linkedin.com/company/alqutbeegroup/" target="_blank" className="hover:text-[var(--gold-deep)]"><Linkedin className="w-5 h-5" /></a>
-            <a href="#" className="hover:text-[var(--gold-deep)]"><Twitter className="w-5 h-5" /></a>
+            <a href="#" className="hover:text-[var(--gold-deep)]">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5"
+            >
+            <path d="M18.154 2H21.8L14.4 10.152L23.2 22H16.46L11.168 15.184L5.2 22H1.546L9.446 13.304L1 2H7.96L12.728 8.312L18.154 2ZM16.888 20H18.748L7.412 3.888H5.434L16.888 20Z" />
+            </svg>
+            </a>
             <a href="#" className="hover:text-[var(--gold-deep)]"><Facebook className="w-5 h-5" /></a>
             <a href="#" className="hover:text-[var(--gold-deep)]"><Instagram className="w-5 h-5"/></a>
           </div>
