@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,16 +32,20 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const businessSubmenu = [
+    { label: "Biznis360", url: "http://biznis360.com/" },
+    { label: "Iqaraat", url: "https://iqaraat.com/" },
+    { label: "QutbeeTechnologies", url: "https://qutbee.com/" },
+  ];
+  
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/About', label: 'About' },
+    { href: '#about', label: 'About' },
     { href: '#vision', label: 'Vision' },
-    { href: '/business', label: 'Our Business' },
+    { href: '/business', label: 'Our Business', submenu: businessSubmenu },
     { href: '/investment', label: 'Investment' },
     { href: '#contact', label: 'Contact' }
   ];
-
- 
   
   return (
     <>
@@ -75,17 +80,45 @@ const Navbar = () => {
               {isMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
             </button>
 
-            <div className="hidden lg:flex items-center gap-12">
-              {navLinks.map(({ href, label }) => (
-                <Link
-                  key={href}
-                  to={href}
-                  className={`nav-link ${activeSection === href.slice(1) ? 'active' : ''}`}
-                >
-                  {label}
-                </Link>
+             <div className="hidden lg:flex items-center gap-12">
+              {navLinks.map(({ href, label, submenu }) => (
+                submenu ? (
+                  <div className="relative group" key={label}>
+                    <Link
+                      to={href}
+                      className={`nav-link flex items-center gap-2 ${activeSection === label.toLowerCase() ? 'active' : ''}`}
+                    >
+                      {label}
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </Link>
+                    <div className="absolute left-0 z-20 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-200">
+                      {submenu.map(({ label: subLabel, url }) => (
+                        <a
+                          key={subLabel}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-[var(--gold-classic)] whitespace-nowrap"
+                        >
+                          {subLabel}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    key={href}
+                    to={href}
+                    className={`nav-link ${activeSection === href.slice(1) ? 'active' : ''}`}
+                  >
+                    {label}
+                  </Link>
+                )
               ))}
             </div>
+
 
           </div>
         </div>
@@ -98,28 +131,69 @@ const Navbar = () => {
               exit={{ opacity: 0, y: -20 }}
               className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-xl"
             >
-              <div className="container py-6 space-y-4">
-                {navLinks.map(({ href, label }) => (
-                  <Link
-                    key={href}
-                    to={href}
-                    className={`block py-2 text-lg ${activeSection === href.slice(1) ? 'text-[var(--gold-deep)]' : 'text-gray-600'}`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {label}
-                  </Link>
+              <div className="container py-6 space-y-3">
+                {navLinks.map(({ href, label, submenu }) => (
+                  submenu ? (
+                    <div key={label} className="flex flex-col">
+                      <div className="flex w-full items-center py-2">
+                        <Link
+                          to={href}
+                          className="text-lg text-gray-600"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {label}
+                        </Link>
+                        <button
+                          type="button"
+                          className="p-2 ml-1.5"
+                          onClick={() =>
+                            setOpenSubmenu(openSubmenu === label ? null : label)
+                          }
+                          aria-label={`${openSubmenu === label ? "Hide" : "Show"} submenu`}
+                        >
+                          <svg
+                            className={`w-5 h-5 transform transition ${openSubmenu === label ? "rotate-180" : ""}`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+                          </svg>
+                        </button>
+                      </div>
+                      {openSubmenu === label && (
+                        <div className="pl-6">
+                          {submenu.map(({ label: subLabel, url }) => (
+                            <a
+                              key={subLabel}
+                              href={url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block py-2 text-gray-600 hover:text-[var(--gold-deep)]"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {subLabel}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      key={href}
+                      to={href}
+                      className={`block py-2 text-lg ${activeSection === href.slice(1) ? "text-[var(--gold-deep)]" : "text-gray-600"}`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {label}
+                    </Link>
+                  )
                 ))}
-                {/* <a
-                  href="#contact"
-                  className="btn btn-primary w-full justify-center mt-6"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
-                </a> */}
               </div>
             </motion.div>
           )}
         </AnimatePresence>
+
       </nav>
     </>
   );

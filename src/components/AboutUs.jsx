@@ -22,8 +22,9 @@ const AboutUs = () => {
           viewport={{ once: false, amount: 0.5 }}
           className="text-center mb-16"
         >
-          <span className="text-[var(--gold-deep)] font-semibold text-lg md:text-xl mb-4 block">About Us</span>
-          <h2 className="heading heading-gradient pb-3 mb-6">Legacy of Excellence in Investment Management</h2>
+          <h2 className="heading heading-gradient pb-3 mb-2">About Us</h2>
+          <span className="text-[var(--gold-deep)] font-semibold text-xl md:text-2xl mb-4 block">Legacy of Excellence in Investment Management</span>
+          
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           At Qutbee, we set the standard for visionary investment solution merging experience, innovation, and strategic insight to create lasting success.
           </p>
